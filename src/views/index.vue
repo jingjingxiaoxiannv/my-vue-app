@@ -1,6 +1,6 @@
 <template>
   <div class="lottery-grid">
-    <div style="margin-bottom: 50px;">
+    <div style="margin-bottom: 10px;">
       <img style="width: 100px;height:100px" src="../assets/apple.jpeg" />
     </div>
     <div class="grid">
@@ -78,7 +78,7 @@ export default {
                 this.isAnimating = true
               })
               .catch(() => {
-                this.isAnimating = true
+                 this.isAnimating = true
                 // on cancel
               });
           }, 500); // 延迟500毫秒后显示结果
@@ -118,13 +118,14 @@ export default {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  padding: 50px 0;
 }
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 100px);
   grid-template-rows: repeat(3, 100px);
   gap: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 50px;
   border: 1px solid gray;
   padding: 10px;
 }
