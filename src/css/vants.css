@@ -1,0 +1,19 @@
+.van-tabs__line {
+    background-color: rgb(0, 151, 151) !important;
+}
+
+.van-nav-bar {
+    background-color: rgb(0, 151, 151) !important;
+}
+
+.van-nav-bar__title {
+    color: #fff !important;
+}
+
+.van-icon-arrow-left {
+    color: #fff !important;
+}
+
+.van-nav-bar__text {
+    color: #fff !important;
+}
