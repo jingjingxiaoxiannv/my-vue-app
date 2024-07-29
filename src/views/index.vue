@@ -2,10 +2,8 @@
   <div class="lottery-grid">
     <div style="margin-bottom: 50px;">
       <img style="width: 100px;height:100px" src="../assets/apple.jpeg" />
-
-      </div>
+    </div>
     <div class="grid">
-     
       <div
         v-for="(prize, index) in prizes"
         :key="index"
@@ -28,18 +26,64 @@
 </template>
 
 <script>
-import { Dialog } from 'vant';
+import { Dialog } from "vant";
 export default {
   data() {
     return {
       dialogVisible: false,
       prizes: [
-        { name: "三次免费贴膜", imgUrl: require('@/assets/tm3.jpg'), probability: 0.01 },
-        { name: "霸王茶几", imgUrl: require('@/assets/bwcj.webp'), probability: 0.02 },
-        { name: "apple watch 50元优惠卷", imgUrl: require('@/assets/q50.png'), probability: 0.07 },
-        { name: 'iphone 15 100元优惠卷', imgUrl: require('@/assets/q100.jpg'), probability: 0.2 },
-        { name: '未中奖', imgUrl: require('@/assets/dy.jpg'), probability: 0.3 },
-        { name: '1次免费贴膜', imgUrl: require('@/assets/tm.webp'), probability: 0.6 },
+        {
+          name: "防静电钢化膜",
+          imgUrl: require("@/assets/3.png"),
+          probability: 0.05
+        },
+        {
+          name: "未中奖",
+          type:0,
+          imgUrl: require("@/assets/err.png"),
+          probability: 0.2
+        },
+        {
+          name: "防窥钢化膜",
+          imgUrl: require("@/assets/4.png"),
+          probability: 0.05
+        },
+        {
+          name: "未中奖",
+          type:0,
+          imgUrl: require("@/assets/err.png"),
+          probability: 0.2
+        },
+        {
+          name: "漫甘娜潮玩美妆礼袋",
+          type:1,
+          imgUrl: require("@/assets/1.png"),
+          probability: 0.05
+        },
+        {
+          name: "漫甘娜游戏币",
+          type:1,
+          imgUrl: require("@/assets/2.jpg"),
+          probability: 0.05
+        },
+        {
+          name: "apple watch 50元优惠卷",
+          type:1,
+          imgUrl: require("@/assets/q50.png"),
+          probability: 0.1
+        },
+        {
+          name: "iphone 15 100元优惠卷",
+          type:1,
+          imgUrl: require("@/assets/q100.jpg"),
+          probability: 0.1
+        },
+        {
+          name: "未中奖",
+          type:0,
+          imgUrl: require("@/assets/err.png"),
+          probability: 0.2
+        }
       ],
       activeIndex: null,
       isAnimating: false,
@@ -65,13 +109,16 @@ export default {
             this.isAnimating = false;
             Dialog.confirm({
               title: "提示",
-              message: `恭喜您获得了${this.prizes[this.activeIndex].name}`
+              message: this.prizes[this.activeIndex].type == 1?  `恭喜您获得了${this.prizes[this.activeIndex].name}`:'很遗憾，未中奖'
             })
               .then(() => {
                 // on confirm
+                this.isAnimating = true
               })
               .catch(() => {
                 // on cancel
+                this.isAnimating = true
+
               });
           }, 500); // 延迟500毫秒后显示结果
         }
@@ -108,7 +155,7 @@ export default {
   grid-template-rows: repeat(3, 100px);
   gap: 10px;
   margin-bottom: 20px;
-  border:1px solid gray;
+  border: 1px solid gray;
   padding: 10px;
 }
 .grid-item {
