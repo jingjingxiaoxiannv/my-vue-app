@@ -2,7 +2,7 @@
   <div class="bigBox">
     <img class="logo" src="../assets/apple1.png" />
     <LuckyGrid
-      style="margin: 0 auto;border: 2px solid #cfcfcf;"
+      style="margin: 30px auto;border: 2px solid #cfcfcf;"
       ref="myLuckyGrid"
       :width="300"
       :height="300"
@@ -13,6 +13,8 @@
       @start="handleStart"
       @end="handleEnd"
     />
+    <p>注：苹果手机提供12-15系列热门款贴膜</p>
+    <p>手机型号不符合贴膜，更换为漫甘娜潮玩游戏币</p>
     <!-- <button @click="start">开始抽奖</button> -->
   </div>
 </template>
@@ -37,7 +39,7 @@ export default {
           background: "#002543",
           imgs: [{ src: require("@/assets/err.png"), width: "93%", top: "5%" }],
           name: "很遗憾，未中奖",
-          probability: 0.1,
+          probability: 0.3,
           activeStyle: { background: "#1da282" },
           borderRadius: 10,
           type: 1
@@ -48,7 +50,7 @@ export default {
           background: "#002543",
           imgs: [{ src: require("@/assets/q50.png"), width: "93%", top: "5%" }],
           name: "apple watch全系列50元优惠卷",
-          probability: 0.1,
+          probability: 0.05,
           activeStyle: { background: "#1da282" },
           borderRadius: 10,
           type: 0
@@ -59,7 +61,7 @@ export default {
           background: "#002543",
           imgs: [{ src: require("@/assets/4.png"), width: "93%", top: "5%" }],
           name: "防窥钢化膜",
-          probability: 0.05,
+          probability: 0.01,
           activeStyle: { background: "#1da282" },
           borderRadius: 10,
           type: 0
@@ -70,7 +72,7 @@ export default {
           background: "#002543",
           imgs: [{ src: require("@/assets/1.png"), width: "93%", top: "5%" }],
           name: "漫甘娜美妆潮玩伴手礼",
-          probability: 0.05,
+          probability: 0.07,
           activeStyle: { background: "#1da282" },
           borderRadius: 10,
           type: 0
@@ -90,7 +92,7 @@ export default {
           background: "#002543",
           imgs: [{ src: require("@/assets/2.png"), width: "93%", top: "5%" }],
           name: "漫甘娜游戏币",
-          probability: 0.1,
+          probability: 0.15,
           activeStyle: { background: "#1da282" },
           borderRadius: 10,
           type: 0
@@ -114,7 +116,7 @@ export default {
           background: "#002543",
           imgs: [{ src: require("@/assets/tm.jpg"), width: "93%", top: "5%" }],
           name: "防静电钢化膜",
-          probability: 0.1,
+          probability: 0.02,
           activeStyle: { background: "#1da282" },
           borderRadius: 10,
           type: 0
@@ -125,7 +127,7 @@ export default {
           background: "#002543",
           imgs: [{ src: require("@/assets/err.png"), width: "93%", top: "5%" }],
           name: "很遗憾，未中奖",
-          probability: 0.4,
+          probability: 0.3,
           activeStyle: { background: "#1da282" },
           borderRadius: 10,
           type: 1
@@ -231,9 +233,8 @@ button {
   height: 100%;
   text-align: center;
   background: #002f55;
-  // background: #5983a6;
   padding: 20% 0;
-
+  color:#fff;
   .logo {
     width: 100px;
     height: 100px;
