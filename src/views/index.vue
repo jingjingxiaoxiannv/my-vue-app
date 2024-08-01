@@ -92,7 +92,7 @@ export default {
           background: "#002543",
           imgs: [{ src: require("@/assets/2.png"), width: "93%", top: "5%" }],
           name: "漫甘娜游戏币",
-          probability: 0.15,
+          probability: 0.2,
           activeStyle: { background: "#1da282" },
           borderRadius: 10,
           type: 0
@@ -127,7 +127,7 @@ export default {
           background: "#002543",
           imgs: [{ src: require("@/assets/err.png"), width: "93%", top: "5%" }],
           name: "很遗憾，未中奖",
-          probability: 0.3,
+          probability: 0.25,
           activeStyle: { background: "#1da282" },
           borderRadius: 10,
           type: 1
