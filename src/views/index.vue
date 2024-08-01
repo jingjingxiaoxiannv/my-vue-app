@@ -59,7 +59,7 @@ export default {
           x: 2,
           y: 0,
           background: "#002543",
-          imgs: [{ src: require("@/assets/4.png"), width: "93%", top: "5%" }],
+          imgs: [{ src: require("@/assets/tm.jpg"), width: "93%", top: "5%" }],
           name: "高清钢化膜",
           probability: 0.01,
           activeStyle: { background: "#1da282" },
